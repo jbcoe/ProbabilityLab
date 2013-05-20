@@ -25,10 +25,10 @@ int main(int argc, char* argv[])
 	
 	tbb::task_group tg;
     
-	std::vector<Person> people(numberOfPeople);
 	for ( size_t i=0; i<numberOfSamples; ++i )
 	{
   	tg.run([&]{
+	std::vector<Person> people(numberOfPeople);
 		for ( auto& person : people )
 		{
 			auto targetPerson = &people[rand()]; 
